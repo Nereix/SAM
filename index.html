@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday My Best Friend</title>
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <section id="note">
+      <img src="millie.png" alt="millie" />
+      <audio id="song" src="Ckay Love Nwantiti.mp3"></audio>
+      <div id="volume-slider" style="display: none">
+        <input
+          type="range"
+          id="volume-control"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        />
+      </div>
+
+      <img src="Note.png" alt="Note" />
+    </section>
+
+    <script>
+      const millie = document.querySelector("#note img[src='millie.png']");
+      const audio = document.getElementById("song");
+      const volumeSlider = document.getElementById("volume-slider");
+
+      millie.addEventListener("click", function () {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
+    </script>
+
+    <footer id="footer">
+      <img src="Heart.png" alt="Heart" />
+      <img src="ixsalimo.png" alt="Text" />
+      <img src="Heart.png" alt="Heart" />
+    </footer>
+  </body>
+</html>
